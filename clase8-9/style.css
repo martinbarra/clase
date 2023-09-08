@@ -1,0 +1,59 @@
+.div1{
+    background-color: grey;
+    width:100%;
+    height:40px;
+    padding-left: 20%;
+    padding-right: 20%;
+    
+}
+
+.div2{
+    height:130px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+#logoucsc{
+    width:450px;
+    height:100px;
+    
+}
+
+#text2{
+    font-size: 40px;
+    color:red;
+}
+
+
+.padl{
+    padding-left: 40px;
+    
+}
+
+.div3{
+    height:50px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.div4{
+    height:350px;
+    padding-left: 20%;
+    padding-right: 20%;
+    background-color: blueviolet;
+}
+
+.div5{
+    height:90px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.div6{
+    height:180px;
+    background-color: grey;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+
