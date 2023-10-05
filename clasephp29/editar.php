@@ -1,9 +1,14 @@
 <?php
 
 include("conexion.php");
-
-$consulta = "SELECT * FROM marcas";
+$id_recibido=$_GET["id_enviado"];
+$consulta = "SELECT * FROM marcas WHERE id=".$id_recibido."";
 $respuesta = mysqli_query($conexion, $consulta);
+
+while($row= mysqli_fetch_assoc($respuesta)){
+    $nombre = $row;
+}
+
 
 ?>
 
