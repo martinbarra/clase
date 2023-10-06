@@ -6,22 +6,11 @@ $respuesta = mysqli_query($conexion, $consulta);
 
 ?>
 
-<!doctype html>
-<html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Marcas</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-</head>
-
-<body>
     <div class="container p-5">
         <div class="row">
             <div class="col">
-                <form action="guardar.php" method="POST">
+                <form action="marcas/guardar.php" method="POST">
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Nombre</span>
                         <input type="text" name="nombre" class="form-control" placeholder="Peugeot"  required>
@@ -63,8 +52,8 @@ $respuesta = mysqli_query($conexion, $consulta);
                             echo "<td>" . $row["nombre"] . "</td>";
                             echo "<td>" . $row["origen"] . "</td>";
                             echo "<td> <img src=". $row["logo"] ."></td>";
-                            echo "<td> <a value='hola' href='eliminar.php?id_enviado=" . $row["id"] . "'><button class='btn btn-sm'>Eliminar</button></a>";
-                            echo "<a value='hola' href='Editar.php?id_enviado=" . $row["id"] . "'><button class='btn btn-sm'>Editar</button></a></td>";
+                            echo "<td> <a value='hola' href='marcas/eliminar.php?id_enviado=" . $row["id"] . "'><button class='btn btn-sm'>Eliminar</button></a>";
+                            echo "<a value='hola' href='marcas/Editar.php?id_enviado=" . $row["id"] . "'><button class='btn btn-sm'>Editar</button></a></td>";
                             echo "</tr>";
                         }
                         ?>
@@ -77,6 +66,4 @@ $respuesta = mysqli_query($conexion, $consulta);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-</body>
 
-</html>
