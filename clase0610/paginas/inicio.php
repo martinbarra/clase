@@ -13,7 +13,7 @@ $respuesta = mysqli_query($conexion, $consulta);
                 <form action="marcas/guardar.php" method="POST">
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Nombre</span>
-                        <input type="text" name="nombre" class="form-control" placeholder="Peugeot"  required>
+                        <input type="text" name="nombre" class="form-control" placeholder="Peugeot" id="nombre" required>
                     </div>
                     <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">Origen</span>
@@ -29,7 +29,7 @@ $respuesta = mysqli_query($conexion, $consulta);
                         <span class="input-group-text" id="basic-addon1">logo</span>
                         <input type="text" name="logo" class="form-control" placeholder="../logo-Peugeot.jpg">
                     </div>
-                    <input type="submit" value="Guardar" class="btn btn-primary">
+                    <input type="submit" value="Guardar" id="boton" class="btn btn-primary">
                 </form>
             </div>
 
@@ -66,4 +66,29 @@ $respuesta = mysqli_query($conexion, $consulta);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
+
+        <script>
+            $(document).ready(function(){
+                $('#boton').click(function(e) {
+                    e.preventDefault();
+                    var hola = $('#nombre'). val();
+                    var data = hola;
+                    $.ajax({
+                        type: "POST",
+                        url: "guardar2.php",
+                        data: data,
+                        success: function (response)
+                        {
+                            console.log("hola adentro del success")
+                        },
+                        error: function (error)
+                        {
+                            console.log("tenemos problemas")
+                        },
+                    });
+
+                });
+            });
+
+        </script>
 
